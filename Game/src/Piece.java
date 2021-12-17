@@ -3,6 +3,7 @@ public abstract class Piece {
     private int posY;
     Side side;
     private boolean isDead;
+    public Board board;
 
     public Piece(int posX, int posY, Side side) {
         this.posX = posX;
@@ -30,7 +31,6 @@ public abstract class Piece {
     public int getY() { return this.posY; };
     public Side getSide() { return this.side; };
     public boolean getIsDead() { return this.isDead; };
-
 
     /* Setters for the piece's positions */
     public void setX(int x) { this.posX = -1; };
