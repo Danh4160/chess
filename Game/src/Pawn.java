@@ -1,9 +1,11 @@
 public class Pawn extends Piece {
     private boolean hasMoved;
+    private boolean promoted;
 
     public Pawn(int x, Side side, boolean hasMoved) {
         super(x, side == Side.BLACK ? 6 : 1, side);
-        this.hasMoved = false;
+        this.hasMoved = hasMoved;
+        this.promoted = false;
     }
 
     @Override
@@ -13,6 +15,7 @@ public class Pawn extends Piece {
 
     @Override
     public boolean canMove(int x, int y, boolean isEating) {
+
         if (!isEating) {
             // Check for valid moves of the pawn
             if (this.getSide() == Side.WHITE) {
