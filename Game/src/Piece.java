@@ -5,10 +5,11 @@ public abstract class Piece {
     private boolean isDead;
     public Board board;
 
-    public Piece(int posX, int posY, Side side) {
+    public Piece(int posX, int posY, Side side, Board board) {
         this.posX = posX;
         this.posY = posY;
         this.side = side;
+        this.board = board;
     }
 
     public void kill() {
